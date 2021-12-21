@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# my test data for developing with a hot reload
+/src/temp_data.js
