@@ -93,24 +93,24 @@ export function siteViews(arr) {
 }
 
 export function viewYoutubePercentage(arr) {
-  const siteVisits = siteViews(arr)
-  var youtubeViews = 0
+  const siteVisits = siteViews(arr);
+  var youtubeViews = 0;
   for (var i = 0; i < siteVisits.length; i++) {
-    if (siteVisits[i][0] == 'www.youtube.com') youtubeViews=siteVisits[i][1]
+    if (siteVisits[i][0] == "www.youtube.com") youtubeViews = siteVisits[i][1];
   }
 
   var sum = 0;
   for (let i = 0; i < siteVisits.length; i++) {
-      sum += siteVisits[i][1];
+    sum += siteVisits[i][1];
   }
-  return Math.ceil(100*youtubeViews/sum)
+  return Math.ceil((100 * youtubeViews) / sum);
 }
 
 export function getYoutubeRank(arr) {
-  const siteVisits = siteViews(arr)
-  var youtubeRank = 0
+  const siteVisits = siteViews(arr);
+  var youtubeRank = 0;
   for (var i = 0; i < siteVisits.length; i++) {
-    if (siteVisits[i][0] == 'www.youtube.com') youtubeRank=i+1
+    if (siteVisits[i][0] == "www.youtube.com") youtubeRank = i + 1;
   }
-  return youtubeRank
+  return youtubeRank;
 }

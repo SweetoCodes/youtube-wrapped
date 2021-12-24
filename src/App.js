@@ -8,13 +8,11 @@ import Fallback from "./pages/fallback";
 import VideoViews from "./pages/video-views";
 import Conclusion from "./pages/conclusion";
 
-
 // lastVisitTime: 1639860516543.5469
 // title: "Reid Hoffman and Chamath Palihapitiya on Angel Investing and The Future of Venture - YouTube"
 // typedCount: 0
 // url: "https://www.youtube.com/watch?v=w-VDSQSHND8&ab_channel=VillageGlobal"
 // visitCount: 3
-
 
 export default function App() {
   const [data, setData] = useState();
@@ -36,20 +34,18 @@ export default function App() {
 
   if (!data) {
     return <Fallback />;
-  } 
-  else {
+  } else {
     return (
       <MemoryRouter>
         <div className="flex h-[600px] w-[800px] bg-[#181818] p-6 overflow-y-auto">
-        <Routes>
-          <Route exact path={"/"} element={<Landing data={data} />}/>
-          <Route exact path={"/videoviews"} element={<VideoViews data={data} />}/>
-
-          <Route exact path={"/conclusion"} element={<Conclusion/>}/>
-        </Routes>
+          <Routes>
+            <Route exact path={"/"} element={<Landing data={data} />} />
+            <Route exact path={"/"} element={<Fallback />} />
+            <Route exact path={"/videoviews"} element={<VideoViews data={data} />}/>
+            <Route exact path={"/conclusion"} element={<Conclusion />} />
+          </Routes>
         </div>
       </MemoryRouter>
-      
     );
   }
 }
