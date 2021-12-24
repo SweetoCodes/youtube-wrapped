@@ -1,10 +1,20 @@
 /*global chrome*/
 import "./App.css";
 import { useState, useEffect } from "react";
-import Landing from "./sections/landing";
-import Fallback from "./sections/fallback";
 import { tempData } from "./temp_data"; // Created and imported so I can develop on localhost with a hot reload
 import { MemoryRouter, Routes, Route, Link } from "react-router-dom";
+import Landing from "./pages/landing";
+import Fallback from "./pages/fallback";
+import VideoViews from "./pages/video-views";
+import Conclusion from "./pages/conclusion";
+
+
+// lastVisitTime: 1639860516543.5469
+// title: "Reid Hoffman and Chamath Palihapitiya on Angel Investing and The Future of Venture - YouTube"
+// typedCount: 0
+// url: "https://www.youtube.com/watch?v=w-VDSQSHND8&ab_channel=VillageGlobal"
+// visitCount: 3
+
 
 export default function App() {
   const [data, setData] = useState();
@@ -30,13 +40,16 @@ export default function App() {
   else {
     return (
       <MemoryRouter>
+        <div className="flex h-[600px] w-[800px] bg-[#181818] p-6 overflow-y-auto">
         <Routes>
           <Route exact path={"/"} element={<Landing data={data} />}/>
-          <Route exact path={"/page1"} element={<Link to="/page2">to p2</Link>}/>
-          <Route exact path={"/page2"} element={<Link to="/page3">to p3</Link>}/>
-          <Route exact path={"/page3"} element={<Link to="/">to home</Link>} />
+          <Route exact path={"/videoviews"} element={<VideoViews data={data} />}/>
+
+          <Route exact path={"/conclusion"} element={<Conclusion/>}/>
         </Routes>
+        </div>
       </MemoryRouter>
+      
     );
   }
 }
