@@ -6,6 +6,7 @@ import { MemoryRouter, Routes, Route, Link } from "react-router-dom";
 import Landing from "./pages/landing";
 import Fallback from "./pages/fallback";
 import VideoViews from "./pages/video-views";
+import TopVideo from "./pages/top-video";
 import Conclusion from "./pages/conclusion";
 
 // lastVisitTime: 1639860516543.5469
@@ -19,17 +20,17 @@ export default function App() {
 
   useEffect(() => {
     setData(tempData);
-    // chrome.history.search(
-    //   {
-    //     text: "",
-    //     maxResults: 1000000, //defaults to 100, set arbitrarily high to get all results
-    //     startTime: 1, // defaults to one day, this gets the full 3 onth history
-    //   },
-    //   function (results) {
-    //     setData(results);
-    //     console.log(results)
-    //   }
-    // );
+  //   chrome.history.search(
+  //     {
+  //       text: "",
+  //       maxResults: 1000000, //defaults to 100, set arbitrarily high to get all results
+  //       startTime: 1, // defaults to one day, this gets the full 3 onth history
+  //     },
+  //     function (results) {
+  //       setData(results);
+  //       console.log(results)
+  //     }
+  //   );
   }, []);
 
   if (!data) {
@@ -42,6 +43,7 @@ export default function App() {
             <Route exact path={"/"} element={<Landing data={data} />} />
             <Route exact path={"/"} element={<Fallback />} />
             <Route exact path={"/videoviews"} element={<VideoViews data={data} />}/>
+            <Route exact path={"/topvideo"} element={<TopVideo data={data} />}/>
             <Route exact path={"/conclusion"} element={<Conclusion />} />
           </Routes>
         </div>
