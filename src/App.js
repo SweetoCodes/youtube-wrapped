@@ -7,6 +7,8 @@ import Landing from "./pages/landing";
 import Fallback from "./pages/fallback";
 import VideoViews from "./pages/video-views";
 import TopVideo from "./pages/top-video";
+import Top3Videos from "./pages/top-3-videos";
+import ChannelViews from "./pages/channel-views";
 import Conclusion from "./pages/conclusion";
 
 // lastVisitTime: 1639860516543.5469
@@ -41,9 +43,10 @@ export default function App() {
         <div className="flex h-[600px] w-[800px] bg-[#181818] p-6 overflow-y-auto">
           <Routes>
             <Route exact path={"/"} element={<Landing data={data} />} />
-            <Route exact path={"/"} element={<Fallback />} />
             <Route exact path={"/videoviews"} element={<VideoViews data={data} />}/>
             <Route exact path={"/topvideo"} element={<TopVideo data={data} />}/>
+            <Route exact path={"/top3videos"} element={<Top3Videos data={data} />}/>
+            <Route exact path={"/channelviews"} element={<ChannelViews data={data} />}/>
             <Route exact path={"/conclusion"} element={<Conclusion />} />
           </Routes>
         </div>

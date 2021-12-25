@@ -11,7 +11,7 @@ export default function TopVideo(props) {
       </p>
       <NavBar
         backwards={{ link: "/videoviews", text: "Previous", reverse: true }}
-        forward={{ link: "/conclusion", text: "Next", reverse: false }}
+        forward={{ link: "/top3videos", text: "Next", reverse: false }}
       />
     </div>
   );
