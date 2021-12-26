@@ -6,7 +6,7 @@ export default function Landing(props) {
   return (
     <div className="w-full space-y-6 m-auto">
       <Title />
-      <div className="text-white text-center text-xl">
+      <div className="text">
         View your Youtube stats since {findEarliestDate(props.data)}
       </div>
       <div className="flex justify-center ">

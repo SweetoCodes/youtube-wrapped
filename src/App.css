@@ -16,5 +16,5 @@ body {
 }
 
 .text {
-  @apply text-white text-center text-xl;
+  @apply text-white text-center text-xl my-auto;
 }
