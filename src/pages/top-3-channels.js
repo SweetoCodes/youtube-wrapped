@@ -9,7 +9,7 @@ export default function Top3Channels(props) {
       <p className="text">are your next three most visited channel pages</p>
       <NavBar
         backwards={{ link: "/topchannel", text: "Previous", reverse: true }}
-        forward={{ link: "/conclusions", text: "Next", reverse: false }}
+        forward={{ link: "/ytpopularity", text: "Next", reverse: false }}
       />
     </div>
   );
