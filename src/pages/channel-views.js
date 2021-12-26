@@ -12,7 +12,7 @@ export default function ChannelViews(props) {
       </p>
       <NavBar
         backwards={{ link: "/top3videos", text: "Previous", reverse: true }}
-        forward={{ link: "/conclusion", text: "Next", reverse: false }}
+        forward={{ link: "/topchannel", text: "Next", reverse: false }}
       />
     </div>
   );

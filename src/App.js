@@ -9,6 +9,8 @@ import VideoViews from "./pages/video-views";
 import TopVideo from "./pages/top-video";
 import Top3Videos from "./pages/top-3-videos";
 import ChannelViews from "./pages/channel-views";
+import TopChannel from "./pages/top-channel";
+import Top3Channels from "./pages/top-3-channels";
 import Conclusion from "./pages/conclusion";
 
 // lastVisitTime: 1639860516543.5469
@@ -47,6 +49,8 @@ export default function App() {
             <Route exact path={"/topvideo"} element={<TopVideo data={data} />}/>
             <Route exact path={"/top3videos"} element={<Top3Videos data={data} />}/>
             <Route exact path={"/channelviews"} element={<ChannelViews data={data} />}/>
+            <Route exact path={"/topchannel"} element={<TopChannel data={data} />}/>
+            <Route exact path={"/top3channels"} element={<Top3Channels data={data} />}/>
             <Route exact path={"/conclusion"} element={<Conclusion />} />
           </Routes>
         </div>
