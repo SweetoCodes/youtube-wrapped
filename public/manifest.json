@@ -1,13 +1,13 @@
 {
-    "name": "Yotube Wrapper",
+    "name": "Yotube Wrapped",
     "version": "1.0.0",
     "manifest_version": 2,
     "description": "Wrapped, but for Youtube",
     "icons": {
-        "512": "logo512.png"
+        "512": "logo.png"
     },
     "browser_action": {
-        "default_icon": "logo512.png",
+        "default_icon": "logo.png",
         "default_popup": "index.html"
     },
     "permissions": [
